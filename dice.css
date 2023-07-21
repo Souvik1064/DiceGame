@@ -1,0 +1,6 @@
+.container{
+    background:  url(),url("../Dice-Game_F5/images/bgm2.jpeg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+}

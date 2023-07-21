@@ -1,0 +1,227 @@
+body{
+	margin: 0px;
+}
+#container{
+    background: url(../assets/overlay.png) ,url("../images/dicezzbgm.jpg");
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, bottom center;
+      background-repeat: repeat, no-repeat;
+}
+
+.main {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+	flex-direction: column;
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
+}
+.main.dark {
+    color: #ffffff;
+}
+.main.style1 {
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+.main.fullscreen {
+    min-height: 100dvh;
+}
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+header h1{
+	margin:0px;
+}
+header nav{
+	width:30%;
+}
+@media screen and (min-width:630px)  {
+	.tdm{
+		display: none;
+	}
+}
+header nav ul{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom:0px;
+	padding-left:0px;
+	
+
+}
+.unordl li{
+	list-style:none;
+	font-family:"Audiowide",sans-serif;
+	font-size: 1.6em;
+	
+}
+
+@media screen and (max-width:999px) {
+	header nav{
+		width:45%;
+	}
+	
+}
+@media screen and (max-width:630px) {
+	
+	
+}
+header h1 span{
+	font-family: monospace;
+	font-size: 1.25em;
+	font-weight: normal;
+}
+.toggle-icon {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+.players{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width:75vw;
+}
+
+/* Show the toggle icon for screens smaller than 630px */
+@media screen and (max-width: 630px) {
+    .toggle-icon {
+        display: inline-block;
+    }
+
+    /* Hide the nav list by default */
+    header nav ul{
+		display: none;
+	}
+	header h1 i{
+		font-family: monospace;
+		font-size: 6vw;
+		font-weight: normal;
+	}
+	header h1 span{
+		font-family: monospace;
+		font-size: 7vw;
+		font-weight: normal;
+	}
+
+    /* Show the nav list when the toggle icon is clicked */
+    header nav ul.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 4.1lvh;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 8px;
+        z-index: 10;
+		
+    }
+	.unordl li{
+		list-style:none;
+		font-family:"Audiowide",sans-serif;
+		font-size: 1.2em;
+		
+	}
+	.players{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		width:100vw;
+	}
+	img{
+		height:140px;
+		width:140px;
+	}
+	
+}
+
+
+
+.dice{
+	border: 1.7px solid wheat;
+	border-radius: 10%;
+	
+}
+.dice p{
+	font-family: 'Sofia';
+	font-weight: bold;
+	font-size: 1.2em;
+}
+section h1{
+	font-family: 'Lobster', cursive;
+	font-size: 2.5em;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 0 10px;
+	color: white;
+	text-shadow: 2px 2px rgb(116, 116, 116);
+	text-transform: uppercase;
+	
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 17px;
+	background-color: hsl(49deg 98% 60%);
+	border-radius: 50px;
+	position: relative;
+	overflow: hidden;
+	transition: all .5s ease;
+  }
+  
+  button:active {
+	transform: scale(.9);
+	transition: all 100ms ease;
+  }
+  
+  button svg {
+	transition: all .5s ease;
+	z-index: 2;
+  }
+  
+  .play {
+	transition: all .5s ease;
+	transition-delay: 300ms;
+  }
+  
+  button:hover svg {
+	transform: scale(3) translate(50%);
+  }
+  
+  .now {
+	position: absolute;
+	left: 0;
+	transform: translateX(-100%);
+	transition: all .5s ease;
+	z-index: 2;
+  }
+  
+  button:hover .now {
+	transform: translateX(10px);
+	transition-delay: 300ms;
+  }
+  
+  button:hover .play {
+	transform: translateX(200%);
+	transition-delay: 300ms;
+  }
+  .bdrbtn{
+	padding-top: 3vh;;
+  }
